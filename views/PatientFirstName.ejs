@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patients First Name List</title>
+</head>
+<body>
+  <h1>Patients Sorted By First Name List</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Patients ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% PatientFirstName.forEach(row => { %>
+        <tr>
+          <td><%= row.patient_id %></td>
+          <td><%= row.first_name %></td>
+          <td><%= row.last_name %></td>
+          <td><%= row.date_of_birth %></td>
+          <td><%= row.gender %></td>
+          <td><%= row.language %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

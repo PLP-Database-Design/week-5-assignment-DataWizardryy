@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patients List</title>
+</head>
+<body>
+  <h1>Patients List</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Patients ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Patients.forEach(row => { %>
+        <tr>
+          <td><%= row.patient_id %></td>
+          <td><%= row.first_name %></td>
+          <td><%= row.last_name %></td>
+          <td><%= row.date_of_birth %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
